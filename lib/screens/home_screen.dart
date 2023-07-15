@@ -45,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  
   String format(int seconds) {
     var duration = Duration(seconds: seconds);
     return duration.toString().split(".").first.substring(2, 7);
@@ -62,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.bottomCenter,
               child: Text(
                 format(totalSeconds),
+                '$totalSeconds',
                 style: TextStyle(
                   color: Theme.of(context).cardColor,
                   fontSize: 89,
